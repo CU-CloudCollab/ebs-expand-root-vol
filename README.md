@@ -1,20 +1,12 @@
 # cloud-ebs-root-expand_vol
 Expand Instance Root Volume
 
-Get Instance ID, Volume ID Root Device mount point
-
-Stop Instance
-
-Get Volume Instance Details 
-
-Detach Root Volume
-
-Take Snapshot
-
-Create New Volutme using VolumeID from above
-
-Attache Volume to instance
-
-Start Instance
-
-Clean UP
+1. Get Instance ID, Volume ID Root Device mount point
+2. Stop Instance
+3. Get Volume Instance Details 
+4. Detach Root Volume
+5. Take Snapshot
+6. Create New Volutme using VolumeID from above
+7. Attache Volume to instance
+8. Start Instance
+9. Clean UP
