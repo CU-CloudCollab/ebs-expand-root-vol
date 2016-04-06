@@ -37,6 +37,6 @@ Functionality to expand the root EBS volume for an AWS EC2 instance.
 ## Known Issues
 
 * Current code does not duplicate the `delete_on_termination` setting of the existing root volume. All new root volumes will be attached with `delete_on_termination = false`
-
+* Code needs to be made command-line-ready.
 
   
