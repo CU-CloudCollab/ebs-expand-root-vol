@@ -68,7 +68,7 @@ The original volume, the new volume, and the snapshot are labeled to allow easy 
 * Target instance must be EBS-backed.
 * Target instance must be linux and not all linux flavors have been tested.
 * Target root volume size must be greater than the current root volume size.
-* The new root volume created is the same as the original, except for size. EBS volume type (standard, general purpose SSD, provisioned IOPS SS) and encryption information is carried to the new root volume.
+* The new root volume created is the same as the original, except for size. EBS volume type (standard, general purpose SSD, provisioned IOPS) and encryption information is carried to the new root volume.
 * This code relies on EC2 magic to automatically expand the root file system upon boot. That expansion seems to happen automatically. If you find it does not happen automatically, you may need to manually run [resize2fs](http://linux.die.net/man/8/resize2fs).
 
 ## Known Issues
