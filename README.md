@@ -1,6 +1,6 @@
 # ebs-expand-root-vol
 
-Ruby functionality to expand the root EBS volume for an AWS EC2 instance.
+Ruby functionality to expand the root EBS volume for an AWS EC2 instance. It closes the AWS gap identified in https://github.com/CU-CloudCollab/aws-gaps/issues/10.
 
 ## Running the Tool
 
@@ -69,8 +69,8 @@ The original volume, the new volume, and the snapshot are labeled to allow easy 
 * Target instance must be linux and not all linux flavors have been tested.
 * Target root volume size must be greater than the current root volume size.
 * The new root volume created is the same as the original, except for size. EBS volume type (standard, general purpose SSD, provisioned IOPS SS) and encryption information is carried to the new root volume.
+* This code relies on EC2 magic to automatically expand the root file system upon boot. That expansion seems to happen automatically. If you find it does not happen automatically, you may need to manually run [resize2fs](http://linux.die.net/man/8/resize2fs).
 
 ## Known Issues
 
 * Current code does not duplicate the `delete_on_termination` setting of the existing root volume. All new root volumes will be attached with `delete_on_termination = false`
-* Code needs to be made command-line-ready.
