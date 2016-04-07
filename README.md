@@ -4,7 +4,7 @@ Ruby functionality to expand the root EBS volume for an AWS EC2 instance.
 
 ## Running from the command line
 
-* See command line options
+### Command line options
 ```
 $ ./go.rb -h
 Usage: go.rb [options]
@@ -16,6 +16,26 @@ Usage: go.rb [options]
     -h, --help                       displays this help
 ```    
 
+### Execute 
+```
+$ ./go.rb -r us-east-1 -i i-0c874a53eb007fa06 -s 17
+Growing root volume on instance i-0c874a53eb007fa06
+rootDeviceName: /dev/xvda
+rootDeviceType: ebs
+originalInstanceState: stopped
+cleanupSnapshot: false
+cleanupOriginalVolume: false
+Original root volume size: 13
+Original root volume delete on termination: false
+Detach root volume from instance.
+Waiting for snapshot to complete ...
+Creating new volume (17GiB)
+Waiting for new volume to become available.
+Waiting for new volume to become available.
+Waiting for new volume to become available.
+Attach new volume to instance.
+```
+
 ## Process
 
 1. gather information about existing root device (root device mapping, root device type, current root volume size, current instance state)
@@ -26,6 +46,8 @@ Usage: go.rb [options]
 1. attach the volume to the instance
 1. restart the instance, if it was running to begin with
 1. [optional] cleanup snapshot and original volume
+
+The original volume, the new volume, and the snapshot are labeled to allow easy identification of the resources involved in this switcheroo.
 
 ## Dependencies
 
