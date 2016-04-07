@@ -74,3 +74,7 @@ The original volume, the new volume, and the snapshot are labeled to allow easy 
 ## Known Issues
 
 * Current code does not duplicate the `delete_on_termination` setting of the existing root volume. All new root volumes will be attached with `delete_on_termination = false`
+
+## Contributions
+
+This code was jointly developed by @nl85cit, @marty-sullivan, @paul-e-allen.
