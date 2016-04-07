@@ -1,4 +1,8 @@
 #!/usr/bin/env ruby
+#
+# Command line wrapper for ExpandRootVol
+#
+#
 
 require 'optparse'
 require_relative "expand_root_vol"

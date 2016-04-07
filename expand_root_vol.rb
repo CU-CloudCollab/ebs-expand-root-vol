@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
-
-#require 'rubygems'
+#
+# Functionality to expand the root EBS volume for an AWS EC2 instance.
+# See README.md
+#
 require 'aws-sdk'
 
 class ExpandRootVol
