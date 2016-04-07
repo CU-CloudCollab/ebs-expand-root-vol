@@ -2,9 +2,9 @@
 
 Ruby functionality to expand the root EBS volume for an AWS EC2 instance.
 
-## Running from the command line
+## Running the Tool
 
-### Command line options
+### Command Line Options
 ```
 $ ./go.rb -h
 Usage: go.rb [options]
