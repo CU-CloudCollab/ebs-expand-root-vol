@@ -77,4 +77,4 @@ The original volume, the new volume, and the snapshot are labeled to allow easy 
 
 ## Contributions
 
-This code was jointly developed by @nl85cit, @marty-sullivan, @paul-e-allen.
+This code was jointly developed by @marty-sullivan, @paul-e-allen, @nl85cit.
